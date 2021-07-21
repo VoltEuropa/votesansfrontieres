@@ -1,6 +1,8 @@
 /*jslint nomen: true, indent: 2, maxlen: 80 */
-/*global window, rJS, RSVP, Date, ics */
-(function (window, rJS, RSVP, Date, ics) {
+/*global window, rJS, RSVP, Date, ics, XMLHttpRequest, DOMParser, URL,
+  loopEventListener, history, console*/
+(function (window, rJS, RSVP, Date, ics, XMLHttpRequest, DOMParser, URL,
+  loopEventListener, history, console) {
     "use strict";
 
   /////////////////////////////
@@ -127,7 +129,6 @@
     return Object.prototype.toString.call(x) === "[object String]";
   }
 
-
   KLASS
 
     /////////////////////////////
@@ -145,7 +146,6 @@
     .ready(function (gadget) {
       var element = gadget.element;
       gadget.property_dict = {
-        "body_tags": gadget.element.querySelectorAll('[data-i18n]'),
         "layout": getElem(element, ".vote-layout"),
         "url_dict": {},
         "content_dict": {},
@@ -211,9 +211,8 @@
       var dict = gadget.property_dict;
       var i;
       var tag;
-      var tag_list = dict.body_tags;
+      var tag_list = gadget.element.querySelectorAll('[data-i18n]');
       var tag_len = tag_list.length;
-
       for (i = 0; i < tag_len; i += 1) {
         tag = tag_list[i];
         tag.textContent = my_payload[tag.getAttribute('data-i18n')];
@@ -379,7 +378,6 @@
     /////////////////////////////
     // on Event
     /////////////////////////////
-
     .onEvent("submit", function (event) {
       switch (event.target.getAttribute(NAME)) {
         case "vsf-select-language":
@@ -390,4 +388,5 @@
     });
 
 
-}(window, rJS, RSVP, Date, ics));
+}(window, rJS, RSVP, Date, ics, XMLHttpRequest, DOMParser, URL,
+  loopEventListener, history, console));
