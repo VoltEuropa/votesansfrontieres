@@ -33,11 +33,14 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" /
     <link rel="manifest" href="manifest.webmanifest" />
 
+    <link rel="stylesheet" href="lib/material_design_lite.1.3.0.min.css" />
+    <link rel="stylesheet" href="vsf.css" />
+
     <style type="text/css">
-      .luce-seo-content * {
+      .vsf-seo-content * {
         text-color: rgb(238,293,246);
       }
-      .luce-splash:before {
+      .vsf-splash:before {
         width: 100%;
         position: absolute;
         background: url("img/icon-512x512.svg") no-repeat center center;
@@ -53,22 +56,235 @@
         background-color: #ffffff;
         content: "";
       }
-      .sud-seo-content * {
+      .vsf-seo-content * {
         color: #ffffff;
       }
     </style>
 
+
+    <script src="lib/material_design_lite.1.3.0.min.js"></script>
+    <script src="lib/ics.min.js"></script>
     <script type="text/javascript" src="rsvp.latest.min.js"></script>
     <script type="text/javascript" src="renderjs.latest.min.js"></script>
+    <script src="gadget_global.js"></script>
+    <script src="lib/jsstyle.js"></script>
     <script type="text/javascript" src="index.js"></script>
+
   </head>
   <body class="vsf-splash vsf-body">
-    <div data-gadget-url="gadget_vsf.html"
-      data-gadget-scope="vsf"
+    <div class="vsf-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="vsf-header mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <a href="XXX" class="vsf-home-button" title="XXX">
+            <img class="vsf-home-icon" src="img/volt.electric.svg" alt="#Vote">
+          </a>
+          <h2 class="vsf-site-header" data-i18n="Vote Without Borders">Vote Without Borders</h2>
+          <div class="mdl-layout-spacer"></div>
+          <button class="vsf-offline-flag mdl-button mdl-js-button mdl-button--icon" disabled="disabled">
+            <i class="material-icons">warning</i>
+          </button>
+          <!--form name="frube-open-menu-->
+          <button id="vsf-open-menu" class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">language</i>
+          </button>
+          <!--/form-->
+
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu vsf-language-menu" for="vsf-open-menu">
+            <li class="mdl-menu__item mdl-menu__item--full-bleed-divider vsf-custom-menu-action" tabindex="-1">
+              <i class="vsf-lang vsf-lang_en"></i>
+              <form name="vsf-select-language" class="vsf-select-language">
+                <input type="hidden" name="vsf_language" value="en">
+                <button type="submit" class="mdl-button mdl-js-button" data-i18n="English">Englisch</button>
+              </form>
+            </li>
+            <li class="mdl-menu__item mdl-menu__item--full-bleed-divider vsf-custom-menu-action " tabindex="-1">
+              <i class="vsf-lang vsf-lang_fr"></i>
+              <form name="vsf-select-language" class="vsf-select-language">
+                <input type="hidden" name="vsf_language" value="fr">
+                <button type="submit" class="mdl-button mdl-js-button" data-i18n="French">Französisch</button>
+              </form>
+            </li>
+            <li class="mdl-menu__item mdl-menu__item--full-bleed-divider vsf-custom-menu-action" tabindex="-1">
+              <i class="vsf-lang vsf-lang_de"></i>
+              <form name="vsf-select-language" class="vsf-select-language">
+                <input type="hidden" name="vsf_language" value="de">
+                <button type="submit" class="mdl-button mdl-js-button" data-i18n="German">Deutsch</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="vsf-page-content mdl-layout__content">
+        <h1 class="vsf-credo" data-i18n="EU citizen living in France?">EU citizen living in France?</h1>
+        <img src="img/citizens.france.svg" alt="Citizens" class="vsf-banner" />
+        <h2 class="vsf-callout" data-i18n="So do you vote?">So do you vote?</h2>
+        
+        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect vsf-tabs">
+          <div class="mdl-tabs__tab-bar">
+              <h3 class="vsf-tab-header"><a href="#france-panel" class="mdl-tabs__tab" data-i18n="In France?">In France?</a></h3>
+              <h3 class="vsf-tab-header"><a href="#home-panel" class="mdl-tabs__tab is-active" data-i18n="At home?">At home?</a></h3>
+              <h3 class="vsf-tab-header"><a href="#why-panel" class="mdl-tabs__tab" data-i18n="Why bother?">Why bother?</a></h3>
+          </div>
+        
+          <!-- FRANCE panel -->
+          <div class="mdl-tabs__panel" id="france-panel">
+            <section class="vsf-content-section">
+  
+              <div class="vsf-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text" data-i18n="1. Can I vote?">1. Can I vote?</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <p class="vsf-card-text" data-i18n="European citizens can vote in municipal and European elections">EU citizens in France can only participate in Municipal elections (next one in 2025) and European elections (next one in 2024). Requirements:</p>
+                  <ul>
+                    <li class="vsf-card-text" data-i18n="are at least 18 years old">at least 18 years old</li>
+                    <li calss="vsf-card-text" data-i18n="are an EU citizen">EU citizen</li>
+                    <li class="vsf-card-text" data-i18n="are a resident of France">resident in France</li>
+                    <li class="vsf-card-text" data-i18n="have full civil and political rights">full civil and political rights.</li>
+                  </ul>
+                  <p><span class="vote-card-text" data-i18n="To register on your commune's electorals lists">Um zu wählen, muss man im jeweiligen Wahlregister seiner Kommune eingeschrieben sein (es gibt ein Register für jede Wahl).</p>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a href="https://www.demarches.interieur.gouv.fr/particuliers/elections-droit-vote-citoyen-europeen-france" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-i18n="More information">More information</a>
+                  <a href="https://www.service-public.fr/particuliers/vosdroits/F16904" target="_blank" class="mdl-button mdl-button-colored mdl-js-button mdl-js-ripple-effect" data-i18n="And if I'm a french citizen living abroad?">And if I'm a french citizen living abroad?</a>
+                </div>
+              </div>
+  
+              <div class="vsf-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text" data-i18n="2. What documents do I need?">2. What documents do I need?</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <p><span class="vote-card-text" data-i18n="The fastest way is online on">The fastest way is online on</span>&nbsp;<a class="vote-card-link" href="https://www.demarches.interieur.gouv.fr/particuliers/elections-droit-vote-citoyen-europeen-france" target="_blank">https://www.demarches.interieur.gouv.fr/particuliers/elections-droit-vote-citoyen-europeen-france</a>&nbsp;<span class="vote-card-text" data-i18n="with the following documents:">with the following documents:</span></p>
+                  <ol class="vote-numbered-list">
+                    <li class="vote-numbered-list-item"><span class="vote-card-text" data-i18n="A copy of your Passport or Identity Card">A copy of your passport, identity card or residency permit</span></li>
+                    <li class="vote-numbered-list-item"><span class="vote-card-text" data-i18n="Justicatif de Domicile">Justicatif de Domile</span>&nbsp;<span class="vote-card-text">-</span>&nbsp;<span class="vote-card-text" data-i18n="A document verifiying your address such as a recent">a document verifiying your address such as a recent</span>&nbsp;<a class="vote-card-link" href="resources/example_justicatif-de-domicile.png" target="_blank" data-i18n="electricity bill on your name">electricity bill on your name</a>&nbsp;(<a class="vote-card-link" data-i18n="other possibilities" href="https://www.demarches.interieur.gouv.fr/particuliers/s-inscrire-liste-electorale-mairie-quel-justificatif-domicile">other possibilities</a>).</li>
+                    <li class="vote-numbered-list-item"><span class="vote-card-text" data-i18n="Declaration of honor of having voting rights">A declaration that you have full voting rights in your home country</span>&nbsp;(<a class="vote-card-link" href="https://www.service-public.fr/simulateur/calcul/DeclarationInscriptionEuropeen" target="_blank" data-i18n="Online generator">Online generator</a>)</li>
+                  </ol>  
+                  <p><span class="vote-card-text" data-i18n="or at your local">or at your local</span>&nbsp;<a href="https://lannuaire.service-public.fr/" target="_blank" class="vote-card-link" data-i18n="Mairie">Mairie</a>&nbsp;(<span class="vote-card-text" data-i18n="in person or by mail">in person or by mail</span>).&nbsp;<span class="vote-card-text" data-i18n="Then you also need to complete the following forms:">Then you also need to complete the following forms:</span></p>
+                  <ol start="4" class="vote-numbered-list">                  
+                    <li class="vote-numbered-list-item"><span class="vote-card-text" data-i18n="European Elections:">European Elections:</span>&nbsp;<a class="vote-card-link" target="_blank" href="https://www.demarches.interieur.gouv.fr/particuliers/formulaire-elections-europeennes-demande-inscription-citoyen-europeen" title="French Government Forms - Cerfa 12671-02 European Elections">Cerfa 12671-02</a></li>
+                    <li class="vote-numbered-list-item"><span class="vote-card-text" data-i18n="Municipal Elections:">Municipal Elections:</span>&nbsp;<a class="vote-card-link" target="_blank" href="https://www.demarches.interieur.gouv.fr/particuliers/formulaire-elections-municipales-demande-inscription-citoyen-europeen" title="French Government Forms - Cerfa 12670-02 Municipal Election">Cerfa 12670-02</a></li>
+                  </ol>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <a href="https://www.demarches.interieur.gouv.fr/particuliers/elections-droit-vote-citoyen-europeen-france" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-i18n="More information">More information</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="vsf-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text" data-i18n="3. Is there a deadline?">3. Is there a deadline?</h2>
+                </div>
+                <div class="mdl-card__supporting-text">  
+                  <p><span class="vote-card-text" data-i18n="Registration is possible until one month before an election,">Registration is possible until one month before an election,</span>&nbsp;<span><b class="vote-card-text" data-i18n="but...">but...</b></span></p>
+                  <h3 class="vsf-card-subtitle" data-i18n="Why not start helping us today?">Why not get involved today?</h3>
+                </div>
+                <div class="mdl-grid">
+                  <div class="vsf-grid-cell mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-shadow--2dp">
+                    <a class="vsf-card-grid-link" href="https://voterswithoutborders.eu/" target="_blank">
+                      <img class="vsf-card-grid-image" src="img/voterswithoutborders.jpg" alt="Voters Without Borders" />
+                      <span class="vsf-card-grid-text vote-card-text" data-i18n="Sign the European Citizens Initiative">Sign the European Citizens Initiative for full voting rights in your EU country of residence</span>  
+                    </a>
+                  </div>
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-shadow--2dp">
+                    <!-- Eurovoices up 1.000.000 -->
+                  </div>
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-shadow--2dp">
+                    <!-- Eurostars -->
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Home -->
+          <div class="mdl-tabs__panel is-active" id="home-panel">
+            <section class="vsf-content-section">
+              <div class="vsf-card mdl-card mdl-shadow--2dp">
+                <div class="vsf-card-germany-image-hook mdl-card__title">
+                  <h2 class="mdl-card__title-text" data-i18n="German Federal Elections">German Federal Elections, September 26th 2021</h2>
+                </div>
+                <div class="mdl-card__supporting-text">  
+                  <p><span class="vote-card-text" data-i18n="In order to vote, you need to">In order to vote, you need to sign up on the electoral list of the last municiality you lived in in Germany. Requirements:</span></p>
+                  <ol class="vote-numbered-list">
+                    <li class="vote-numbered-list-item"><span class="vote-card-text" data-i18n="German nationality and at least 18 years old">German nationality and at least 18 years old</span></li>
+                    <li class="vote-numbered-list-item"><span class="vote-card-text" data-i18n="Lived at least 3 months in Germany during the last 25 years">Lived at least 3 months in Germany during the last 25 years</span></li>
+                    <li class="vote-numbered-list-item"><span class="vote-card-text" data-i18n="Or because of a personal and direct familiarity with and being affected by political conditions">Or (!) because of a personal and direct familiarity with and being affected by political conditions</span>&nbsp;(<a class="vote-card-link" href="https://www.bundeswahlleiter.de/dam/jcr/49fd7b4e-436c-45c3-baed-e9d8ffb8c547/anwendungshinweise_12_bwg.pdf" target="_blank" data-i18n="Examples">Examples</a>).</li>
+                  </ol>
+                  <p><span class="vote-card-text" data-i18n="The deadline (for receiving requests) for application is">The deadline (for receiving requests) for application is</span>&nbsp;<span><b class="vote-card-text" data-i18n="September 5th, 2021">September 5th, 2021</b></span>&nbsp;(<a href="https://www.bundeswahlleiter.de/dam/jcr/f6f26b9d-112e-4066-bbea-2551ddd577cf/btw21_schaubild_fristen_termine_ad.png" target="_blank" class="vote-link-text" data-i18n="Timeline">Timeline</a>).</p>
+                  <div class="vote-content-timer-wrapper">
+                    <h3 class="vsf-content-timer-header">
+                    <span class="vote-content-timer-title" data-i18n="Time left to register">Time left to register:</span>
+                    <span class="vote-content-timer">
+                      <span class="days vote-card-text"></span><span class="vote-card-text" data-i18n="d">d</span>:<span class="hours vote-card-text"></span><span class="vote-card-text" data-i18n="h">h</span>:<span Class="minutes vote-card-text"></span><span class="vote-card-text" data-i18n="m">m</span>:<span class="seconds vote-card-text"></span><span class="vote-card-text" data-i18n="s">s</span>
+                    </span>
+                    </h3>
+                    <div class="vsf-alarm">
+                      <form name="vsf-reminder">
+                        <button type="submit" class="vote-submit-button vsf-create-alarm"><i class="material-icons">alarm</i></button>
+                        <input type="hidden" name="vote_remind_title" data-i19n="Reminder: 1 week left to register for German Federal elections. Info on www.votesansfrontieres.fr" value="Reminder: 1 week left to register for German Federal elections. Info on www.votesansfrontieres.fr" />
+                        <input type="hidden" name="vote_remind_date" value="08/29/2021 09:00:00 AM GMT+0100" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="mdl-grid">
+                  <div class="vsf-grid-cell mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-shadow--2dp">
+                    <a class="vsf-card-grid-link" href="https://www.bundeswahlleiter.de/bundestagswahlen/2021/informationen-waehler/deutsche-im-ausland.html" target="_blank">
+                      <img class="vsf-card-grid-image vsf-card-bwl" src="img/bwl.svg" alt="Bundeswahlleiter" />
+                      <span class="vsf-card-grid-text vote-card-text" target="_blank" data-i18n="Register now to participate in the elections">Register now to participate in the elections</span>  
+                    </a>
+                  </div>
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-shadow--2dp">
+                    <a class="vsf-card-grid-link" href="voteVolt_de.html">YOOOOO
+                      <span class="vsf-card-grid-text vote-card-text" target="_blank" data-i18n="Why vote for Volt in Germany?">Why vote for Volt in Germany?</span>  
+                    </a>
+                  </div>
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-shadow--2dp">
+                    <a class="vsf-card-grid-link" href="supportVolt_de.html">MMMMEEEE
+                      <span class="vsf-card-grid-text vote-card-text" target="_blank" data-i18n="Register now to participate in the elections">Register now to participate in the elections</span>  
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+          </div>
+
+          <!-- Why bother -->          
+          <div class="mdl-tabs__panel" id="why-panel">
+            <ul>
+              <li>Viserys</li>
+              <li>Daenerys</li>
+            </ul>
+          </div>
+        </div>
+        
+        <footer class="vsf-footer-wrapper">
+        <div class="vsf-footer-bar">
+          
+        </div>
+        <div class="vsf-footer">
+          <div class="vsf-credits sud-credits-end">
+            <span class="vsf-footer-text" data-i18n="© 2021 - Created by">© 2021 - Created byr</span>&nbsp;
+            <a class="vsf-credits-link" href="https://www.volfrance.org/" title="Volt France"><img class="vsf-publisher" src="img/volt.min.png" alt="www.voltfrance.org" /></a>
+            <span class="vsf-footer-text">,</span>&nbsp;
+            <span class="vsf-footer-text" data-i18n="hosted on">hosted on</span>&nbsp;
+            <a class="vsf-credits-link" href="https://github.com/VoltEuropa/votesansfrontieres">Github</a>
+            <span class="vsf-footer-text">.</span>&nbsp;
+            <span class="vsf-footer-text" data-i18n="made with">made with</span>
+            <a class="vsf-credits-link" href="https://renderjs.nexedi.com/">RenderJS</a> &amp; <a class="vsf-credits-link" href="https://jio.nexedi.com">jIO</a>
+            <span class="">.</span>
+          </div>
+        </div>
+        </footer>
+      </main>
+    </div>
+    <div data-gadget-url="gadget_jio.html"
+      data-gadget-scope="vsf_jio"
       data-gadget-sandbox="public">
-      <div class="vsf-seo-content">
-      <!-- add content -->
-      </div>      
     </div>
   </body>
 </html>
