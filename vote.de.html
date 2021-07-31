@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vote sans frontières | Voter pour Volt Allemagne</title>
+
+    <meta name="application-name" content="Vote sans frontières">
+    <meta name="description" content="Aider les Européens en France à voter aux élections en France et dans leur pays d'origine">
+    <meta name="url" content="https://www.votesansfrontieres.fr/">
+    <meta name="keywords" content="Vote, Étranger, Europe, Expat" />
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Vote sans frontières">
+    <meta property="og:site_name" content="Vote sans frontières">
+    <meta property="og:description" content="Aider les Européens en France à voter aux élections en France et dans leur pays d'origine">
+    <meta property="og:url" content="https://www.votesansfrontieres.fr/">
+    <meta property="og:locale" content="fr_fr">
+    <meta property="og:image" content="https://www.votesansfrontieres.fr/img/icon_512x512.png" />
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Vote sans frontières">
+    <meta name="twitter:description" content="Aider les Européens en France à voter aux élections en France et dans leur pays d'origine">
+    <meta name="twitter:url" content="https://www.votesansfrontieres.fr/">
+    <meta name="twitter:creator" content="@svenfranck">
+    <meta name="twitter:image" content="https://www.votesansfrontieres.fr/img/icon_512x512.png" />
+
+    <link rel="canonical" href="https://www.votesansfrontieres.fr/vote.de.html" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" /
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="stylesheet" href="lib/material_design_lite.1.3.0.min.css" />
+    <link rel="stylesheet" href="vsf.css" />
+
+    <style type="text/css">
+      .vsf-seo-content * {
+        text-color: rgb(255,255,255);
+      }
+      .vsf-splash:before {
+        width: 100%;
+        position: absolute;
+        background: url("img/icon_512x512.svg") no-repeat center center;
+        background-size: 50% auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        z-index: 999999;
+        background-color: #ffffff;
+        content: "";
+      }
+      .vsf-seo-content * {
+        color: #ffffff;
+      }
+    </style>
+
+
+    <script src="lib/material_design_lite.1.3.0.min.js"></script>
+    <script src="lib/ics.min.js"></script>
+    <script src="rsvp.latest.min.js"></script>
+    <script src="renderjs.latest.min.js"></script>
+    <script src="gadget_global.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="vsf-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="vsf-header mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <a href="XXX" class="vsf-home-button" title="XXX">
+            <img class="vsf-home-icon" src="img/volt.electric.svg" alt="#Vote">
+          </a>
+          <h2 class="vsf-site-header" data-i18n="Vote Without Borders">Vote Without Borders</h2>
+          <div class="mdl-layout-spacer"></div>
+          <button class="vsf-offline-flag mdl-button mdl-js-button mdl-button--icon" disabled="disabled">
+            <i class="material-icons">warning</i>
+          </button>
+          <!--form name="frube-open-menu-->
+          <button id="vsf-open-menu" class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">language</i>
+          </button>
+          <!--/form-->
+  
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu vsf-language-menu" for="vsf-open-menu">
+            <li class="mdl-menu__item mdl-menu__item--full-bleed-divider vsf-custom-menu-action" tabindex="-1">
+              <i class="vsf-lang vsf-lang_en"></i>
+              <form name="vsf-select-language" class="vsf-select-language">
+                <input type="hidden" name="vsf_language" value="en">
+                <button type="submit" class="mdl-button mdl-js-button" data-i18n="English">Englisch</button>
+              </form>
+            </li>
+            <li class="mdl-menu__item mdl-menu__item--full-bleed-divider vsf-custom-menu-action " tabindex="-1">
+              <i class="vsf-lang vsf-lang_fr"></i>
+              <form name="vsf-select-language" class="vsf-select-language">
+                <input type="hidden" name="vsf_language" value="fr">
+                <button type="submit" class="mdl-button mdl-js-button" data-i18n="French">Französisch</button>
+              </form>
+            </li>
+            <li class="mdl-menu__item mdl-menu__item--full-bleed-divider vsf-custom-menu-action" tabindex="-1">
+              <i class="vsf-lang vsf-lang_de"></i>
+              <form name="vsf-select-language" class="vsf-select-language">
+                <input type="hidden" name="vsf_language" value="de">
+                <button type="submit" class="mdl-button mdl-js-button" data-i18n="German">Deutsch</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main class="vsf-page-content mdl-layout__content">
+        <section class="page-content">
+
+          <h1 class="vsf-credo" data-i18n="Why vote for Volt Germany in France?">Why vote for Volt Germany in France?</h1>
+          <img src="img/Welcome-to-Volt.jpg" alt="Volt Deutschland" class="vsf-banner" />
+          <h2 class="vsf-callout" data-i18n="Presenting Volt, the first paneuropean party">Presenting Volt, the first paneuropean party.</h2>
+
+          <h2 class="vsf-card-text vsf-content-header" data-i18n="Volt is presenting itself">Introducing Volt</h2>
+          
+          <div class="vsf-card mdl-card mdl-shadow--2dp vsf-card-shrink">
+            <div class="mdl-card__title vsf-hello-volt">
+              <h3 class="mdl-card__title-text vsf-card-title">Volt</h3>
+            </div>
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text vsf-card-text" data-i18n="Who are we?">Who are we?</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p class="vsf-card-text" data-i18n="Wir sind Volt. Eine">We are Volt. A pan-European movement and party. We were founded in 2017 - as a reaction and active counter-movement to the rising tide of nationalism and populism across Europe. We exist because we are convinced that the great challenges of the 21st century can only be solved if we act together across borders. In a Europe where all people have the same opportunities to develop their full potential. A Europe that strives for the highest standards of human, social, environmental and technical development.</p>  
+            </div>
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text vsf-card-text" data-i18n="What is our vision?">What is our vision?</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p class="vsf-card-text" data-i18n="Volt's longterm vision is">Volt's long-term vision is to create a federal, united Europe with a common European government, a prime minister elected by parliament and a president. The basis for this is a European Constitution jointly legitimised by European citizens. We are working for this vision with a European programme at all levels and in all countries of Europe. For us, the creation of a federal European republic is not an end in itself, but a means to solve the great challenges of our time together across national borders.</p>  
+            </div>
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text vsf-card-text" data-i18n="What kind of party is Volt?">What kind of party is Volt?</h3>  
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p><b class="vsf-card-text" data-i18n="Volt is a European party.">Volt is a European party!</b>&nbsp;<span class="vsf-card-text" data-i18n="First and foremeost">First and foremost, we are committed to European unification and cross-border cooperation at all levels! We want to reform the European Union so that it can act across borders. We stand firmly against any form of populism and nationalism.</span></p>
+              <p><b class="vsf-card-text" data-i18n="We are pragmatic and progressiv">We regard ourselves as pragmatic and progressive.</b>&nbsp;<span class="vsf-card-text" data-i18n="This means we do not strictly">This means: we do not strictly follow an ideology, but always look for the best solutions. We combine social, liberal and green aspects. We are convinced that unilateral national efforts and a policy of isolation are the wrong approach to tackling the challenges of the 21st century.</span></p>  
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="https://www.voltdeutschland.org/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-i18n="Volt Germany">Volt Germany</a>
+              <a href="https://www.voltfrance.org/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-i18n="Volt France">Volt France</a>
+              <a href="https://www.volteuropa.org/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-i18n="Volt Europa">Volt Europa</a>
+            </div>
+          </div>
+
+          <h2 class="vsf-card-text vsf-content-header" data-i18n="Federal elections">Federal Elections</h2>
+
+          <div class="vsf-card mdl-card mdl-shadow--2dp vsf-card-shrink">
+            <div class="mdl-card__title vsf-why-volt">
+              <h3 class="mdl-card__title-text vsf-card-title" data-i18n="Why Volt?">Why Volt?</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p><b class="vsf-card-text" data-i18n="The time has come for the European generation.">Die Zeit ist reif für die Generation Europa.</b><span class="vsf-card-text" data-i18n="Considering the political challenges">Angesichts großer politischer Herausforderungen und dem Ende der Ära Merkel ist die Bundestagswahl 2021 eine riesige Chance für uns alle, Wandel anzustoßen und mitzugestalten. Die Zeit ist reif für eine neue Generation in der Politik. Eine Generation, die sich nicht durch das Alter definiert, sondern durch gemeinsame Werte und die Vision eines besseren Europa: Die #GenerationEuropa!</span></p>
+              <ul>
+                <li><b class="vsf-card-text" data-i18n="The Generation Europe thinks across borders">The Generation Europe thinks and acts across borders.</b>&nbsp;<span class="vsf-card-text" data-i18n="National parties reach their limits">National parties are reaching their limits and yet national governments in the EU Council decide on the future direction of the EU. As a result, Europe is in a continuous process of negotiating national interests. Globalisation is bringing the world ever closer together. There is a need for policies that solve problems across borders.</span></li>
+                <li><b class="vsf-card-text" data-i18n="For the Generation Europe, Europe is the guarantee for piece and our future">For the Generation Europe, Europe is the guarantee for peace and our future - then and now</b>&nbsp;<span class="vsf-card-text" data-i18n="We're not evading change">We do not close ourselves off to change, but strive for it actively and courageously. We seize opportunities and want to solve problems pragmatically.</span></li>
+                <li><b class="vsf-card-text" data-i18n="The Generation Europe is united">Generation Europe is united by diversity and shared values.</b>&nbsp;<span class="vsf-card-text" data-i18n="We put cooperation over isolation">We put cooperation before isolation, no matter where someone comes from and how old they are. In Europe and beyond. That's what Generation Europe is all about!</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="vsf-card mdl-card mdl-shadow--2dp vsf-card-shrink">
+            <div class="mdl-card__title vsf-new-politics">
+              <h3 class="mdl-card__title-text vsf-card-title" data-i18n="What does 'New politics' mean?">Was bedeutet "Neue Politik"?</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <ul>
+                <li><b class="vsf-card-text" data-i18n="Pan-European">Pan-European</b>&nbsp;<span class="vsf-card-text" data-i18n="Volt thinks and acts european">Volt thinks and acts European and makes policy across borders. Our European network and understanding are at the heart of our movement. We take a European perspective first and foremost; because we believe that the challenges of our time can only be solved in a European way.</span></li>
+                <li><b class="vsf-card-text" data-i18n="Evidence-based">Evidence-based</b>&nbsp;<span class="vsf-card-text" data-i18n="Volt's political positions and content">Volt's policy positions and content are scientifically founded. In addition to best practices, we incorporate current scientific findings. We argue logically and coherently. We explain our policy positions and content in an understandable way. We make clear the assumptions on which our claims are based and illustrate them with examples.</span></li>
+                <li><b class="vsf-card-text" data-i18n="Integrative">Integrative</b>&nbsp;<span class="vsf-card-text" data-i18n="Volt wants to allow everyone">Volt wants to enable active and accessible participation for all people who share our values. This means that volunteers and members can take on responsibility in concrete projects right from the start. We count on you, no matter how old you are, where you come from or how long you have been with us.</span></li>
+                <li><b class="vsf-card-text" data-i18n="Moving politics">Moving politics</b>&nbsp;<span class="vsf-card-text" data-i18n="We think like a party and act like a movement">We think like a party and act like a movement. We don't just think from election to election. Real political change happens in the long term and on the ground.</span></li>
+              </ul>            
+            </div>
+          </div>
+          
+          <div class="vsf-card mdl-card mdl-shadow--2dp vsf-card-shrink">
+            <div class="mdl-card__title vsf-new-europe">
+              <h3 class="mdl-card__title-text vsf-card-title" data-i18n="What does 'new Europe' mean?">What does 'New Europe' mean?</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <ol>
+                <li><b class="vsf-card-text" data-i18n="European Republic">European Republic: united // federal // reformed</b><br/>
+                  <span class="vsf-card-text" data-i18n="Our goal is one Europe">Our goal is one Europe and one democracy: a European Republic that is united and democratically controlled by its citizens. For us, the creation of a federal European Republic is not an end in itself, but a means to solve the great challenges of our time together across national borders.</span>
+                </li>
+                <li><b class="vsf-card-text" data-i18n="Self-determined digitisation">Self-determined digitisation: independent // secure // open</b><br/>
+                  <span class="vsf-card-text" data-i18n="Your data are yours">Your data is your property. We demand a self-determined European digital strategy that focuses on the benefits for citizens. The digital transformation must be pushed in all areas of our society so that it has a lasting impact on us and we are not left behind. For this, we have to invest, invest in an economy with a future!</span>
+                </li> 
+                <li><b class="vsf-card-text" data-i18n="Climate-protecting economy">Climate-protecting economy: climate-neutral // entrepreneurial // social</b><br/>
+                  <span class="vsf-card-text" data-i18n="We are following a european approach">We are taking a pan-European approach to climate issues, because climate change does not stop at borders. Our goal: We want to be climate neutral not only nationwide, but across Europe by 2040. We want to support entrepreneurs and companies across Europe who are committed to a climate-friendly market economy and make it the benchmark for their entrepreneurial development and technological innovation. So that the economy gets into the green figures!</span>
+                </li>
+                <li><b class="vsf-card-text" data-i18n="Restart Education">Relaunch education: individual // lifelong // innovative</b><br/>
+                  <span class="vsf-card-text" data-i18n="We want nothing less than to restart education">We stand for nothing less than a complete reboot of our education system that equips learners with core competencies for the digital century. This requires more cooperation of education policy at the federal level on the one hand, and more school autonomy on the other. However, our focus is always on the child and learning itself - regardless of age. Education should be as individual as our children!</span>
+                </li>
+                <li><b class="vsf-card-text" data-i18n="One society">ONE society: integrating // solidarity // active</b><br/>
+                  <span class="vsf-card-text" data-i18n="We want to shape a society">We want to shape ONE society that is resilient, cohesive and based on solidarity. For the time being, our health  care system must focus on the prevention of diseases and not on diseases alone. This is the only way to get health without a virus in the system itself! We become resilient as a society when we stick together. For us, solidarity means that you are covered by solidarity, no matter what path you want to take in your life. For us, solidarity also means that we actively stand up for those who come to us, that we integrate them and give them what every person deserves; a new home on safe paths. We all have a voice in this society. Let us use it for positive things, for more togetherness instead of against each other; against divisions, hatred, injustice and discrimination. We see ourselves as a society with equal opportunities for all.</span>
+                </li>  
+              </ol>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="https://www.voltdeutschland.org/btw/programm" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-i18n="Our programme">Our programme</a>
+              <a href="https://www.voltdeutschland.org/btw/kandidierende" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-i18n="Our candidates">Our candidates</a>
+            </div>
+          </div>
+          
+          <h2 class="vsf-card-text vsf-content-header" data-i18n="Having a say instead of being excluded">Having a say instead of being excluded</h2>
+
+          <div class="vsf-card mdl-card mdl-shadow--2dp vsf-card-shrink">
+            <div class="mdl-card__title vsf-france">
+              <h3 class="mdl-card__title-text vsf-card-title" data-i18n="Why vote for Volt Germany in France?">Why vote for Volt Germany in France?</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <ol>
+                <li><b class="vsf-card-text" data-i18n="More Europe">More Europe</b><br/>
+                  <span class="vsf-card-text" data-i18n="Volt now exists in all European countries.">Volt is now present in all European countries. We have a common European programme that is also the focus of our respective national programmes. Even if EU citizens outside Germany are excluded from national elections like here in France, a vote for Volt Germany is also a vote for Volt France: a vote for more Europe and more cooperation.</span>
+                </li>
+                <li><b class="vsf-card-text" data-i18n="More integration">More integration</b><br/>
+                  <span class="vsf-card-text" data-i18n="Whether it's access to the labour market or freedom of movement">Whether it's access to the labour market or freedom of movement, Europeans abroad are living the European idea. However, our democratic systems remain national in scope. The more we integrate across Europe and are excluded from national elections where we live, the more important it becomes to vote in elections in our home country and to give a vote for more Europe and more integration.</span>
+                </li>
+                <li><b class="vsf-card-text" data-i18n="More representation">More representation</b><br/>
+                  <span class="vsf-card-text" data-i18n="European parties have not been legally possible">European parties and transnational lists are legally not possible until now. Therefore, Volt Europe has created national chapters and to try and represent the interests of European citizens. A vote for Volt Germany from abroad is therefore also a vote for Volt Europe and more representation.</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+        </section>
+        <footer class="vsf-footer-wrapper">
+          <div class="vsf-footer-bar"></div>
+          <div class="vsf-footer">
+            <div class="vsf-credits sud-credits-end">
+              <span class="vsf-footer-text" data-i18n="© 2021 - Created by">© 2021 - Created byr</span>&nbsp;
+              <a class="vsf-credits-link" href="https://www.volfrance.org/" title="Volt France"><img class="vsf-publisher" src="img/volt.min.png" alt="www.voltfrance.org" /></a>
+              <span class="vsf-footer-text">,</span>&nbsp;
+              <span class="vsf-footer-text" data-i18n="hosted on">hosted on</span>&nbsp;
+              <a class="vsf-credits-link" href="https://github.com/VoltEuropa/votesansfrontieres">Github</a>
+              <span class="vsf-footer-text">.</span>&nbsp;
+              <span class="vsf-footer-text" data-i18n="made with">made with</span>
+              <a class="vsf-credits-link" href="https://renderjs.nexedi.com/">RenderJS</a> &amp; <a class="vsf-credits-link" href="https://jio.nexedi.com">jIO</a>
+              <span class="">.</span>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <div data-gadget-url="gadget_jio.html"
+      data-gadget-scope="vsf_jio"
+      data-gadget-sandbox="public">
+    </div>
+  </body>
+</html>
+    

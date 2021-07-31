@@ -168,11 +168,15 @@
 .vsf-footer {
   background-color: #502379;
 }
+.vsf-card-text,
+.vote-card-text {
+  color: #000000;
+}
 .vsf-credo,
-.vsf-callout {
+.vsf-callout,
+.vote-content-timer .vote-card-text {
   color: #502379;
 }
-
 .vsf-credo,
 .vsf-callout,
 .vsf-custom-menu-action .mdl-button,
@@ -211,7 +215,7 @@
   font-size: 2em;
 }
 .vsf-site-header:before {
-  content: "·";
+  content: " ";
   padding-right: .25em;
   margin-left: -.25em;
 }
@@ -309,6 +313,7 @@
   font-weight: bold;
   text-align: center;
   font-size: 5em;
+  line-height: 1em;
 }
 @media only screen and (max-width: 48em) {
   .vsf-credo,
@@ -446,9 +451,72 @@
   float: right;
   margin-top: -3.9em;
 }
+
+.vsf-card-shrink {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 48em) {
+  .vsf-card-shrink {
+    max-width: none;
+  }
+}
+.vsf-content-header {
+  font-family: 'Ubuntu';
+  text-align: center;
+  color: #502379;
+  margin-top: 1em;
+}
+.vsf-card-title {
+  font-family: 'Ubuntu';
+  color: #ffffff;
+  font-weight: bold;
+}
 .vsf-create-alarm {
   float: right;
   border: 0 none;
   background-color: transparent;
   cursor: pointer;
+}
+.vsf-hello-volt {
+  background-image: url(img/plakatschlange.jpg);
+  background-repeat: no-repeat;
+  height: 20em;
+  background-size: cover;
+  background-position: 0% 40%;
+}
+.vsf-new-politics {
+  background-image: url(img/aktion.jpg);
+  background-repeat: no-repeat;
+  height: 20em;
+  background-size: cover;
+  background-position: 0% 40%;
+}
+.vsf-why-volt {
+  background-image: url(img/girl-with-poster_0.png);
+  background-repeat: no-repeat;
+  height: 20em;
+  background-size: cover;
+  background-position: 0% 40%;
+}
+.vsf-france {
+  background-image: url(img/rome-flag.jpg);
+  background-repeat: no-repeat;
+  height: 20em;
+  background-size: cover;
+  background-position: 0% 40%;
+}
+.vsf-new-europe {
+  background-image: url(img/campaign-trail.jpg);
+  background-repeat: no-repeat;
+  height: 20em;
+  background-size: cover;
+  background-position: 0% 40%;
+}
+.vsf-page-content .vsf-card-text,
+.vsf-page-content .vsf-link-text,
+.vsf-page-content .vote-card-text,
+.vsf-page-content .vote-link-text {
+  font-family: Ubuntu;
 }
