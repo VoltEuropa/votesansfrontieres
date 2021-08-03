@@ -1,20 +1,20 @@
 {
   "manifest_version": 1,
   "version": "0.0.1",
-  "name": "LUCE | Liste d'Union Citoyenne et Européenne",
-  "short_name": "LUCE",
-  "description": "Rassemblement de mouvements citoyens pro-européens qui présentent une liste pour les élections régionales en Hauts-de-France les 20 et 27 juin 2021",
+  "name": "Vote Sans Frontières",
+  "short_name": "Vote Sans Frontières",
+  "description": "Aider les Européens en France à voter aux élections en France et dans leur pays d'origine",
   "default_locale": "fr",
   "icons": [
         {
-            "src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"
+            "src":"img/icon_192x192.svg","sizes":"192x192"
         },
         {
-            "src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"
+            "src":"img/icon_512x512.svg","sizes":"512x512"
         }
     ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1D3557",
-  "theme_color": "#FFC839"
+  "background_color": "#ffffff",
+  "theme_color": "#502379"
 }
