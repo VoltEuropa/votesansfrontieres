@@ -513,11 +513,15 @@
       var dict = gadget.property_dict;
       var i;
       var tag;
+      var translation;
       var tag_list = gadget.element.querySelectorAll('[data-i18n]');
       var tag_len = tag_list.length;
       for (i = 0; i < tag_len; i += 1) {
         tag = tag_list[i];
-        tag.textContent = my_payload[tag.getAttribute('data-i18n')];
+        translation = my_payload[tag.getAttribute('data-i18n')];
+        if (translation) {
+          tag.textContent = translation;
+        }
       }
     })
 
