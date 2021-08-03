@@ -490,35 +490,35 @@
   cursor: pointer;
 }
 .vsf-hello-volt {
-  background-image: url(img/plakatschlange.jpg);
+  background-image: url(img/plakatschlange.min.jpg);
   background-repeat: no-repeat;
   height: 20em;
   background-size: cover;
   background-position: 0% 40%;
 }
 .vsf-new-politics {
-  background-image: url(img/aktion.jpg);
+  background-image: url(img/aktion.min.jpg);
   background-repeat: no-repeat;
   height: 20em;
   background-size: cover;
   background-position: 0% 40%;
 }
 .vsf-why-volt {
-  background-image: url(img/girl-with-poster_0.png);
+  background-image: url(img/girl-with-poster_0.min.png);
   background-repeat: no-repeat;
   height: 20em;
   background-size: cover;
   background-position: 0% 40%;
 }
 .vsf-france {
-  background-image: url(img/rome-flag.jpg);
+  background-image: url(img/rome-flag.min.jpg);
   background-repeat: no-repeat;
   height: 20em;
   background-size: cover;
   background-position: 0% 40%;
 }
 .vsf-climate {
-  background-image: url(img/climate-change.jpg);
+  background-image: url(img/climate-change.min.jpg);
   background-repeat: no-repeat;
   height: 20em;
   background-size: cover;
@@ -530,7 +530,7 @@
   }
 }
 .vsf-new-europe {
-  background-image: url(img/campaign-trail.jpg);
+  background-image: url(img/campaign-trail.min.jpg);
   background-repeat: no-repeat;
   height: 20em;
   background-size: cover;
