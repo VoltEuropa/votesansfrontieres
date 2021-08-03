@@ -309,6 +309,11 @@
   box-sizing: border-box;
   font-size: 3em;
 }
+.vsf-credo-shrink {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .vsf-callout {
   font-weight: bold;
   text-align: center;
@@ -319,6 +324,11 @@
   .vsf-credo,
   .vsf-callout {
     font-size: 2em;
+  }
+  .vsf-credo-shrink {
+    max-width: none;
+    margin-left: .5em;
+    margin-right: .5em;
   }
 }
 .vsf-banner {
@@ -506,6 +516,18 @@
   height: 20em;
   background-size: cover;
   background-position: 0% 40%;
+}
+.vsf-climate {
+  background-image: url(img/climate-change.jpg);
+  background-repeat: no-repeat;
+  height: 20em;
+  background-size: cover;
+  background-position: 0% 0%;
+}
+@media only screen and (max-width: 48em) {
+  .vsf-climate {
+    background-position: center 0%;
+  }
 }
 .vsf-new-europe {
   background-image: url(img/campaign-trail.jpg);
