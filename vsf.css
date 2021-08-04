@@ -381,6 +381,20 @@
   vertical-align: top;
   width: 92%;
 }
+.vsf-card-shrink {
+  max-width: 80%;
+}
+@media only screen and (max-width: 48em) {
+  .vsf-card-shrink {
+    max-width: none;
+  }
+}
+.vsf-card-shrink .vsf-card-title {
+  color: #502379;
+  font-size: 1.25em;
+  text-align: center;
+  line-height: 1.25em;
+}
 .vsf-card.mdl-shadow--2dp {
   box-shadow: 0 2px 2px 0 rgb(80 35 121 / 14%), 0 3px 1px -2px rgb(80 35 121 / 20%), 0 1px 5px 0 rgb(80 35 121 / 12%);
 }
