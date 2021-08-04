@@ -289,15 +289,20 @@
 .vsf-footer-bar .vsf-card-text-standalone {
   text-align: center;
 }
+.share-button {
+  text-decoration: none;
+}
 .share-button .material-icons {
   vertical-align: middle;
   display: inline-block;
+  color: #502379;
+  padding-right: .5em;
 }
 .share-button .fab,
 .share-button .material-icon-text {
   color: #502379;
 }
-.material-icon-text.vsf-link-text {
+.vsf-share-align .material-icon-text {
   font-size: .6em;
 }
 .vsf-link-wrapper {
@@ -437,6 +442,8 @@
 }
 .vote-card-link {
   color: #502379;
+  font-family: Ubuntu;
+  font-size: 1.1em;
 }
 .vsf-card-subtitle {
   text-align: center;
@@ -587,4 +594,5 @@
 .vsf-page-content .vote-card-text,
 .vsf-page-content .vote-link-text {
   font-family: Ubuntu;
+  font-size: 1.1em;
 }
