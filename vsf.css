@@ -286,6 +286,38 @@
   text-align: center;
   padding-top: .5em;
 }
+.vsf-footer-bar .vsf-card-text-standalone {
+  text-align: center;
+}
+.share-button .material-icons {
+  vertical-align: middle;
+  display: inline-block;
+}
+.share-button .fab,
+.share-button .material-icon-text {
+  color: #502379;
+}
+.material-icon-text.vsf-link-text {
+  font-size: .6em;
+}
+.vsf-link-wrapper {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+.vsf-share-button {
+  font-size: 1.5em;
+}
+.vsf-card-text.luce-share-align {
+  padding-top: 1em;
+}
+.vsf-share-align {
+  font-size: 2em;
+  margin: .5em 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .vsf-publisher {
   max-width: 3em;
   margin-top: -5px;
