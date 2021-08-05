@@ -422,6 +422,9 @@
   display: inline-block;
   vertical-align: middle;
 }
+.vsf-alarm {
+  text-align: center;
+}
 .vsf-create-alarm {
   border: 0 none;
   color: #502379;
