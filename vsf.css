@@ -411,6 +411,25 @@
   width: 65%;
   margin: .75em auto 0;
 }
+.follow-button {
+  display: inline-block;
+  vertical-align: middle;
+  color: #502379;
+  font-size: 1.5em;
+  margin: .25em;
+}
+.vsf-reminder {
+  display: inline-block;
+  vertical-align: middle;
+}
+.vsf-create-alarm {
+  border: 0 none;
+  color: #502379;
+  background-color: transparent;
+  cursor: pointer;
+  padding-right: .4em;
+}
+
 .vsf-card {
   display: inline-block;
   margin: 2em 4% 0;
@@ -510,11 +529,6 @@
   pointer-events: none;
   margin-top: 0;
 }
-.vsf-alarm {
-  float: right;
-  margin-top: -3.9em;
-}
-
 .vsf-card-shrink {
   max-width: 80%;
   display: block;
@@ -535,12 +549,6 @@
   font-family: 'Ubuntu';
   color: #ffffff;
   font-weight: bold;
-}
-.vsf-create-alarm {
-  float: right;
-  border: 0 none;
-  background-color: transparent;
-  cursor: pointer;
 }
 .vsf-hello-volt {
   background-image: url(img/plakatschlange.min.jpg);
